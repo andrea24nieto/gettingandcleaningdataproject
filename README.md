@@ -11,13 +11,13 @@ set.
 The data that was used for this project corresponds to the [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
 ## Files
-* ```{run_analysis.R}``` contains the code written to perform the following steps:
+* ```run_analysis.R``` contains the code written to perform the following steps:
 1. Merge the training and the test sets to create one data set.
 2. Extract only the measurements on the mean and standard deviation for each        measurement. 
 3. Use descriptive activity names to name the activities in the data set.
 4. Appropriately label the data set with descriptive variable names.
 5. From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-* ```{FinalData.txt}``` is the exported tidy data set that resulted from executing the steps described above.
+* ```FinalData.txt``` is the exported tidy data set that resulted from executing the steps described above.
 
-* ```{CodeBookC3.md}``` corresponds to the code book that indicates all the variables and summaries calculated, along with units, and any other relevant information.
+* ```CodeBookC3.md``` corresponds to the code book that indicates all the variables and summaries calculated, along with units, and any other relevant information.
