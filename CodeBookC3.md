@@ -4,16 +4,16 @@ Getting and Cleaning Data Course Project: Code Book
 The following code book describes all the variables and summaries
 calculated in the `{run_analysis.R}` script.
 
-1. Downloading the data
------------------------
+**1. Downloading the data**
+---------------------------
 
 -   Data was downloaded from the [Human Activity Recognition Using
     Smartphones](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
     online data set. The folder was unzipped and extracted under the
     folder called `{UCI HAR Dataset}`.
 
-2. Assigning each relevant data set to variables
-------------------------------------------------
+**2. Assigning each relevant data set to variables**
+----------------------------------------------------
 
 -   `{activities}` &lt;- `{activity_labels.txt}`: (6 rows, 2 columns)
     *List of activities performed when measurements were taken and their
@@ -39,8 +39,8 @@ calculated in the `{run_analysis.R}` script.
 -   `{y_train}` &lt;- `{train/y_train.txt}`: (7352 rows, 1 column)
     *Contains activity labels for the train data set*
 
-3. Merging data sets
---------------------
+**3. Merging data sets**
+------------------------
 
 -   `{compfeatX}` (10299 rows, 561 columns) was created by merging
     `{x_test}` and `{x_train}` using the **rbind()** function. It
@@ -58,8 +58,8 @@ calculated in the `{run_analysis.R}` script.
     `{compfeatX}`, the second column of `{features}` was used to assign
     column names).
 
-4. Extracting only mean and standard deviation measurements
------------------------------------------------------------
+**4. Extracting only mean and standard deviation measurements**
+---------------------------------------------------------------
 
 -   `{tidydata}` (10299 rows, 68 columns) was created by subsetting
     `{subject}`, `{activity}` and mean and standard deviation columns
@@ -67,25 +67,26 @@ calculated in the `{run_analysis.R}` script.
     package. Mean and standard deviation variables were isolated using
     the **grep()** function.
 
-5. Using descriptive activity names
------------------------------------
+**5. Using descriptive activity names**
+---------------------------------------
 
 -   The `{activity}` column values from `{tidydata}` were replaced with
     the corresponding activities extracted from the second column of the
     `{activities}` data frame.
 
-6. Labeling data set with descriptive variable names
-----------------------------------------------------
+**6. Labeling data set with descriptive variable names**
+--------------------------------------------------------
 
 The following substitutions were made in the `{tidydata}` variable names
-using the **gsub()** function: + Old: Initial lowercase *t* -&gt; New:
-*Time* + Old: Initial lowercase *f* -&gt; New: *Frequency* + Old: *Acc*
--&gt; New: *Accelerometer* + Old: *Gyro* -&gt; New: *Gyroscope* + Old:
-*Mag* -&gt; New: *Magnitude* + Old: *BodyBody* -&gt; New: *Body* + Old:
-*-mean* -&gt; New: *Mean* + Old: *-std* -&gt; New: *STD*
+using the **gsub()** function:  
++ Old: Initial lowercase *t* -&gt; New: *Time* + Old: Initial lowercase
+*f* -&gt; New: *Frequency* + Old: *Acc* -&gt; New: *Accelerometer* +
+Old: *Gyro* -&gt; New: *Gyroscope* + Old: *Mag* -&gt; New: *Magnitude* +
+Old: *BodyBody* -&gt; New: *Body* + Old: *-mean* -&gt; New: *Mean* +
+Old: *-std* -&gt; New: *STD*
 
-7. Creating second tidy data set with group averages
-----------------------------------------------------
+**7. Creating second tidy data set with group averages**
+--------------------------------------------------------
 
 -   `{tidyavg}` (180 rows, 68 columns) was created using the
     **group\_by()** and **summarise()** functions from the **dplyr**
