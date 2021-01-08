@@ -83,5 +83,6 @@
         tidyavg <- tidydata %>% group_by(subject, activity) %>% 
                 summarise(across(.fns = mean))
         
-        write.table(tidyavg, file = "FinalData.txt")
+        write.table(tidyavg, file = "FinalData.txt", row.names = FALSE)
+        
         
