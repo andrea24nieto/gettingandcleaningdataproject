@@ -1,5 +1,5 @@
 # Peer Graded Assignment: Getting and Cleaning Data Course Project
-**Andrea Nieto Gutiérrez**
+**Andrea Nieto Gutiérrez**  
 **January 8, 2020**
 
 This repository corresponds to the final project of the course **Getting
