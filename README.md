@@ -17,3 +17,7 @@ The data that was used for this project corresponds to the [Human Activity Recog
 3. Use descriptive activity names to name the activities in the data set.
 4. Appropriately label the data set with descriptive variable names.
 5. From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+* ```{FinalData.txt}``` is the exported tidy data set that resulted from executing the steps described above.
+
+* ```{CodeBookC3.md}``` corresponds to the code book that indicates all the variables and summaries calculated, along with units, and any other relevant information.
