@@ -83,3 +83,5 @@
         tidyavg <- tidydata %>% group_by(subject, activity) %>% 
                 summarise(across(.fns = mean))
         
+        write
+        
